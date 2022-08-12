@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_tx">email</string>
+    <string name="hint_email_editText">Email</string>
+    <string name="password_tx">Password</string>
+    <string name="hint_password_editText">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_signup">Signup</string>
+    <string name="instructions_txt1">the app for selling shoes</string>
+    <string name="instructions_txt2">press the button to continue</string>
+    <string name="welcome_txt">Welcome to the store</string>
+    <string name="welcome_txt2">press the button to start</string>
+    <string name="nav_btn_txt">instructions</string>
+    <string name="instructions_btn_txt">continue</string>
+    <string name="shoe_name_txt">Shoa Name</string>
+    <string name="shoe_name_hint">shoa name</string>
+    <string name="company_name_txt">Company</string>
+    <string name="company_name_hint">Company name</string>
+    <string name="shoe_size_txt">Shoa Size</string>
+    <string name="shoe_size_hint">Size</string>
+    <string name="description_txt">Descriotion</string>
+    <string name="description_hint">Description</string>
+    <string name="button_save_txt">Save</string>
+    <string name="button_cancel_txt">Cancel</string>
+    <string name="fab_description">Add shoe</string>
+    <string name="default_message">tha Store is empty , add Shoe!!</string>
+</resources>
