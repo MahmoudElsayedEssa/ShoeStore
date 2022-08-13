@@ -33,18 +33,18 @@ class ShoeListFragment : Fragment(R.layout.fragment_shoe_list) {
         shoeViewModel.shoes.observe(viewLifecycleOwner) { shoeList ->
             if (shoeList.isNotEmpty())
                 binding.emptyView.visibility = View.GONE
-            else {
-                shoeList.forEach { shoe ->
-                    val shoeItem =
-                        ShoeItemBinding.inflate(LayoutInflater.from(requireContext()), null, false)
 
-                    shoeItem.shoeName.text = shoe.name
-                    shoeItem.description.text = shoe.description
-                    shoeItem.shoeSize.text = shoe.size.toString()
-                    shoeItem.company.text = shoe.company
+            shoeList.forEach { shoe ->
+                val shoeItem =
+                    ShoeItemBinding.inflate(LayoutInflater.from(requireContext()), null, false)
 
-                    binding.linearlayoutShoelist.addView(shoeItem.root)
-                }
+                shoeItem.shoeName.text = shoe.name
+                shoeItem.description.text = shoe.description
+                shoeItem.shoeSize.text = shoe.size.toString()
+                shoeItem.company.text = shoe.company
+
+                binding.linearlayoutShoelist.addView(shoeItem.root)
+
 
             }
         }

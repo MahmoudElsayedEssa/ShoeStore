@@ -5,8 +5,15 @@
 
     <data>
 
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+
+        <import type="com.udacity.shoestore.models.ConvertersKt" />
+
     </data>
 
+    <!--        using constraint layout for complex views with flat hierarchy for better performance -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout4"
         android:layout_width="match_parent"
@@ -33,6 +40,7 @@
             android:hint="@string/shoe_name_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={shoe.name}"
             app:layout_constraintStart_toStartOf="@+id/shoe_name"
             app:layout_constraintTop_toBottomOf="@+id/shoe_name" />
 
@@ -55,6 +63,7 @@
             android:hint="@string/company_name_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={shoe.company}"
             app:layout_constraintStart_toStartOf="@+id/company_name"
             app:layout_constraintTop_toBottomOf="@+id/company_name" />
 
@@ -77,6 +86,7 @@
             android:hint="@string/shoe_size_hint"
             android:importantForAutofill="no"
             android:inputType="number"
+            android:text="@={ConvertersKt.doubleToString(shoe.size)}"
             app:layout_constraintStart_toStartOf="@+id/shoe_size_txtView"
             app:layout_constraintTop_toBottomOf="@+id/shoe_size_txtView" />
 
@@ -99,6 +109,7 @@
             android:hint="@string/description_hint"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:text="@={shoe.description}"
             app:layout_constraintStart_toStartOf="@+id/description_txtView"
             app:layout_constraintTop_toBottomOf="@+id/description_txtView" />
 
@@ -107,6 +118,7 @@
             style="@style/btn_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_marginTop="@dimen/layout_margin_l"
             android:text="@string/button_save_txt"
             app:layout_constraintEnd_toStartOf="@+id/button_cancel"

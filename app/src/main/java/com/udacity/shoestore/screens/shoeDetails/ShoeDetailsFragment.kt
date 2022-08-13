@@ -27,14 +27,17 @@ class ShoeDetailsFragment : Fragment(R.layout.fragment_shoe_details) {
     ): View {
         _binding = FragmentShoeDetailsBinding.inflate(inflater, container, false)
 
+        binding.shoe = Shoe()
         binding.saveBtn.setOnClickListener {
-            val newShow = Shoe(
-                name = binding.shoeNameEditText.text.toString(),
-                company = binding.companyNameEditText.text.toString(),
-                description = binding.descriptionEditText.text.toString(),
-                size = binding.shoeSizeEditText.text.toString().toDouble(),
-            )
-            shoeViewModel.addShoe(newShow)
+//            val newShow = Shoe(
+//                name = binding.shoeNameEditText.text.toString(),
+//                company = binding.companyNameEditText.text.toString(),
+//                description = binding.descriptionEditText.text.toString(),
+//                size = binding.shoeSizeEditText.text.toString().toDouble(),
+//            )
+
+//            Timber.i("name is ${(binding.shoe as Shoe)}")
+            shoeViewModel.addShoe(binding.shoe as Shoe)
 
             view?.findNavController()?.navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment)
         }
